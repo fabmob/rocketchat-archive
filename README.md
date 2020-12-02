@@ -1,8 +1,8 @@
 # rocketchat-archive
 
-Archive des salons publics archivés du chat.fabmob.io. 
+Archive des salons publics archivés du chat.fabmob.io.
 
-## Comment ça marche ? 
+## Comment ça marche ?
 
 Rocketchat permet d'archiver des canaux, mais ils restent présents dans l'interface, perturbant les utilisateurs.
 
@@ -10,11 +10,20 @@ On utilise ici la fonction d'export des messages (trois petits points en haut à
 
 Une fois téléchargé, j'utilise les commandes suivantes pour ajouter le canal à l'archive.
 
+J'ai fait un petit script à utiliser, très simple.
+
+```
+chmod +x script
+./script /sdcard/Download/xxx moncanal
+```
+
+Il fait ça essentiellement :
 
 ```
 unzip ARCHIVE_TELECHARGEE -d NOM_DU_SALON && rm ARCHIVE_TELECHARGEE
 ```
-Puis pour renommer le fichier d'export html en index.html qu'il s'affiche directement dans le navigateur : 
+
+Puis pour renommer le fichier d'export html en index.html qu'il s'affiche directement dans le navigateur :
 
 ```
 find . -depth -name '*.html'     -execdir bash -c 'mv -- "$1" "${1//*/index.html}"' bash {} \;

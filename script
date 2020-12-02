@@ -1,0 +1,6 @@
+#!/bin/bash 
+echo "Bienvenue dans ce magnifique script sophistiqué"
+
+unzip $1 -d $2 & rm $1
+
+find . -depth -name '*.html'     -execdir bash -c 'mv -- "$1" "${1//*/index.html}"' bash {} \;
