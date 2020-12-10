@@ -1,0 +1,351 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8"><p><strong>gabriel.plassat</strong> (Sun, 08 Jul 2018 07:56:33 GMT):<br/>
+créer un référentiel commun pour décrire toutes les offres de mobilité pour être interrogeable par des machines
+</p>
+<p><strong>gabriel.plassat</strong> (Sun, 08 Jul 2018 07:56:33 GMT):<br/>
+Channel pour tous les offreurs de solution de mobilité publiques et privées
+</p>
+<p><strong>gabriel.plassat</strong> (Sun, 08 Jul 2018 07:59:09 GMT):<br/>
+La page du wiki associée http://wiki.lafabriquedesmobilites.fr/wiki/R%C3%A9f%C3%A9rentiel_commun_pour_d%C3%A9crire_une_offre_de_mobilit%C3%A9_(publique_et_priv%C3%A9e)
+</p>
+<p><strong>laurent_chevereau</strong> (Mon, 23 Jul 2018 12:05:37 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>laurent_chevereau</strong> (Mon, 23 Jul 2018 12:10:55 GMT):<br/>
+Bonjour! Je souscris au besoin d'une source qui fasse référence pour décrire les offres de mobilité. Mais quelle définition / périmètre pour ces "offres de mobilité"? Le titre me fait plutôt penser aux offres "classiques" comme transport collectif, covoiturage, autopartage, vélos en libre service, mais l'exemple de description de Wimoov concerne plutôt des offres de mobilité, au sens se solutions innovantes et solidaires d'accompagnement autour de la mobilité. C'est assez différent; et si on veut tout mettre dans le même paquet, c'est ambitieux et plus compliqué je pense...
+</p>
+<p><strong>laurent_chevereau</strong> (Mon, 23 Jul 2018 12:14:42 GMT):<br/>
+Concernant les offres "classiques", le site http://www.passim.info/ géré par le Cerema décrit 2000 offres de transport en France, dont 400+ réseaux urbains, les 100 réseaux interurbains, les réseaux régionaux, 133 services de covoiturage, 56 services d'autopartage, 36 services de VLS, ...
+</p>
+<p><strong>laurent_chevereau</strong> (Mon, 23 Jul 2018 12:15:05 GMT):<br/>
+Voici le modèle utilisé pour décrire ces offres de mobilité : 
+    Nom commercial (*)
+    Autorité - Nom
+    Autorité - Type
+    Autorité - url
+    Exploitant - Nom
+    Exploitant - Type
+    Exploitant - url
+    Type de contrat
+    Type d'usagers
+    Niveau
+    Territoire couvert
+    Type de transport
+    Sous-type de transport
+    Mode de transport
+    Service d'info officiel
+    Accessibilité
+    Accessibilité - url
+    Tarifs
+    Tarifs - url
+    Réservation
+    Réservation - url
+    Services
+    Services - url
+    Calendrier
+    Calendrier - url
+    Temps réel
+    Nombre d'arrêts ou stations
+    Nombre de véhicules
+    Notes
+
+</p>
+<p><strong>gabriel.plassat</strong> (Mon, 23 Jul 2018 15:47:12 GMT):<br/>
+Merci @laurent_chevereau Passim convient tout à fait. Le sujet porte d'abord sur les offres de mobilité traditionnelles :TC, covoit, autoP, VLS, ... Nous pouvons regarder si les autres offres peuvent être décrites avec les mêmes champs. J'ai parcouru Passim et je n'ai pas l'impression que les offres soient toutes décrites en remplissant tous les champs listés. Est ce que cette base de données pourrait être interrogée par une API ? Par exemple, Renvoie moi les services en PACA pour les chômeurs au départ d'Aix. C'est possible ?
+</p>
+<p><strong>laurent_chevereau</strong> (Fri, 05 Oct 2018 11:51:39 GMT):<br/>
+Pour l'instant pas vraiment. Il y a une sorte d'API en REST qui est limitée et correspond je crois aux champs disponibles sur la partie back-office de Passim, mais qui ne renvoie qu'une page html avec les offres correspondantes. Cf exemple suivant pour les chômeurs en Finistère: http://petitpois.passim.info/poi/search?ack=recherche+d%27emplois&k=Category%3Arecherche-d-emplois&q=&w=29+FINISTERE&s=active
+</p>
+<p><strong>laurent_chevereau</strong> (Fri, 05 Oct 2018 11:54:11 GMT):<br/>
+Ceci dit, c'est tout à fait modifiable a priori. On a un marché en cours, donc on peut faire faire des développements en ce sens... Par ex : Envisager des requêtes possibles par API sur tous les champs, avec une restitution sous un format à définir. (désolé pour le délai de réponse, je n'avais pas paramétré d'alertes, mais c'est fait, je serai plus réactif maintenant...)
+</p>
+<p><strong>gabriel.plassat</strong> (Fri, 05 Oct 2018 18:11:36 GMT):<br/>
+et bien c'est super ça ! faisons le ...
+</p>
+<p><strong>laurent_chevereau</strong> (Fri, 23 Nov 2018 09:13:27 GMT):<br/>
+Qui serait intéressé pour réfléchir aux besoins, et au format souhaité?
+</p>
+<p><strong>gabriel.plassat</strong> (Fri, 23 Nov 2018 09:43:07 GMT):<br/>
+aujourd'hui je pense que ça n'intéresse "que" le Cerema, Ademe, probablement wimoov @karimwimoov et peut être transdev/keolis, reste à trouver la bonne personne :-) 
+</p>
+<p><strong>karimwimoov</strong> (Fri, 23 Nov 2018 09:43:07 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>laurent_chevereau</strong> (Mon, 26 Nov 2018 12:23:18 GMT):<br/>
+[ ](https://chat.fabmob.io/channel/offres_mobilite?msg=M8GfBdBZjsBfF2BqE) @gabriel.plassat Bonjour @zbouziane Tu saurais qui pourrait être intéressé par ce sujet chez Transdev? (liste des offres de mobilité et modèle de référencement) Merci!
+</p>
+<p><strong>zbouziane</strong> (Mon, 26 Nov 2018 12:23:18 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>laurent_chevereau</strong> (Mon, 26 Nov 2018 13:06:46 GMT):<br/>
+J'ai proposé à l'UTP qui m'a indiqué être dispo pour aider. Concernant les contacts dans les grands groupes de transporteurs, ils peuvent lancer un appel lors de leur prochaine commission "Nouvelles Mobilités - Villes de demain" (qui se tient dans 15 jours). 
+</p>
+<p><strong>gabriel.plassat</strong> (Mon, 26 Nov 2018 13:08:55 GMT):<br/>
+super, comment veux tu procéder pour Transdev/Keolis ? on rédige une page qui explique le projet et on envoie à nos contacts ?
+</p>
+<p><strong>gabriel.plassat</strong> (Fri, 11 Jan 2019 09:52:56 GMT):<br/>
+Prochaine étape : - rédiger 2 pages sur le pourquoi il faut standardisé / créer un référentiel des offres de mobilités
+- avoir un atelier sur le sujet puis avancer selon les volontés/énergies.
+
+J'avais commencé à faire la note : http://wiki.lafabriquedesmobilites.fr/wiki/R%C3%A9f%C3%A9rentiel_commun_pour_d%C3%A9crire_une_offre_de_mobilit%C3%A9_(publique_et_priv%C3%A9e) - c'est à compléter mais c'est une base.
+
+Pour le cas d'usage, françois gatineau porte un projet qui a besoin d'offres de mobilité interrogeables par des machines, donc standardisées. 
+Wimoov a également un projet en ce sens. Wimoov avait commencé à lister les offres dans 2 départements "à la main". @karimwimoov  peux tu confirmer le besoin ?
+Vos cas d'usage permettraient de commencer à spécifier les besoins pour ce référentiel.
+
+</p>
+<p><strong>laurent_chevereau</strong> (Fri, 11 Jan 2019 10:42:20 GMT):<br/>
+
+<br/><a href="./assets/NxzQEtG9LiMoGtCa7-projet_referentiel_offres_mobilité_FabMob.doc">projet_referentiel_offres_mobilité_FabMob.doc</a>
+</p>
+<p><strong>laurent_chevereau</strong> (Fri, 11 Jan 2019 10:42:32 GMT):<br/>
+Pour aller plus loin, il faut essayer de référencer les besoins / cas d'usage / personnes intéressées.  Gabriel, qui gère / est autorisé à modifier la page du wiki?
+</p>
+<p><strong>gabriel.plassat</strong> (Mon, 14 Jan 2019 17:36:44 GMT):<br/>
+Tout le monde peut modifier les pages avec un compte. Il y a un historique qui permet de revenir en arrière si besoin.
+</p>
+<p><strong>gabriel.plassat</strong> (Mon, 14 Jan 2019 17:38:01 GMT):<br/>
+@margotsanchez pour ton info, nous échangeons sur l'idée de créer un référentiel pour décrire toutes les offres de mobilités. Il faut donc se mettre d'accord sur le format de description des offres, puis développer une API pour gérer cette base de données et permettre d'automatiser l'interrogation de la base. 
+</p>
+<p><strong>margotsanchez</strong> (Mon, 14 Jan 2019 17:38:01 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>gabriel.plassat</strong> (Mon, 14 Jan 2019 17:39:05 GMT):<br/>
+[ ](https://chat.fabmob.io/channel/offres_mobilite?msg=N86hqRouEKgJvZitm) @laurent_chevereau tu veux que je mette à jour la page sur le wiki relative à ce sujet ? La proposition me va bien pour commencer !
+</p>
+<p><strong>laurent_chevereau</strong> (Thu, 07 Feb 2019 14:30:24 GMT):<br/>
+[ ](https://chat.fabmob.io/channel/offres_mobilite?msg=brjK4M2gSesrt8rNF) @gabriel.plassat Oui, volontiers!
+</p>
+<p><strong>patgendre94</strong> (Wed, 20 Feb 2019 07:09:20 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>irshad</strong> (Wed, 31 Jul 2019 13:47:13 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Caubel</strong> (Tue, 10 Mar 2020 16:54:31 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>laura.foglia</strong> (Tue, 10 Mar 2020 17:10:11 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Jean.ROBERT</strong> (Tue, 10 Mar 2020 17:59:43 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>yann.tremeac</strong> (Thu, 12 Mar 2020 12:19:20 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>jerome-poyet</strong> (Mon, 16 Mar 2020 14:16:45 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>laurence.mechin</strong> (Mon, 16 Mar 2020 14:32:31 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>mireille</strong> (Mon, 16 Mar 2020 14:34:07 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>pierre.taillant</strong> (Mon, 16 Mar 2020 14:47:09 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>remy.leboennec</strong> (Mon, 16 Mar 2020 15:27:47 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>lara.hoelting</strong> (Tue, 17 Mar 2020 13:31:29 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>nicolas.lb</strong> (Fri, 20 Mar 2020 10:47:50 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>kmog</strong> (Fri, 20 Mar 2020 11:55:29 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>lea.chretien</strong> (Fri, 20 Mar 2020 15:19:08 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>paul_bridier</strong> (Fri, 20 Mar 2020 16:09:00 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Yao</strong> (Fri, 20 Mar 2020 19:07:51 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>cecile.lavernhe</strong> (Mon, 23 Mar 2020 09:37:29 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>marc.cottignies</strong> (Mon, 23 Mar 2020 10:30:14 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>sandrine.carballes</strong> (Mon, 23 Mar 2020 10:50:22 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Kiki</strong> (Mon, 23 Mar 2020 13:05:52 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>louise.kold-taylor</strong> (Mon, 23 Mar 2020 18:31:53 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>ClaraB</strong> (Sun, 29 Mar 2020 15:05:13 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>emmanuel.poisson-quinton</strong> (Mon, 30 Mar 2020 08:54:32 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Cath</strong> (Mon, 30 Mar 2020 18:46:58 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>pony</strong> (Wed, 01 Apr 2020 09:23:40 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>salvatore.cimmino</strong> (Fri, 03 Apr 2020 13:51:37 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>karine</strong> (Sat, 04 Apr 2020 19:51:30 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>camillem</strong> (Sun, 05 Apr 2020 18:35:45 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>jonatan.cloutier</strong> (Tue, 07 Apr 2020 20:47:35 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>marie-pierre.gendron</strong> (Fri, 10 Apr 2020 14:42:05 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Jesse</strong> (Fri, 10 Apr 2020 20:41:12 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>gontrand.dumont</strong> (Fri, 10 Apr 2020 20:55:01 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>xavier.massicotte</strong> (Fri, 10 Apr 2020 21:00:36 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>clem</strong> (Fri, 10 Apr 2020 21:28:11 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>marie.tack</strong> (Fri, 10 Apr 2020 21:52:00 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Ysaia</strong> (Sat, 11 Apr 2020 01:32:32 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>ameliepb</strong> (Sat, 11 Apr 2020 14:18:09 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>laurent.lewis</strong> (Sun, 12 Apr 2020 16:22:41 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Amelie</strong> (Sun, 12 Apr 2020 22:36:33 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Amelie</strong> (Sun, 12 Apr 2020 22:41:48 GMT):<br/>
+<i>Has left the channel.</i>
+</p>
+<p><strong>maude.lapointe</strong> (Mon, 13 Apr 2020 15:33:30 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>melissa.dlf</strong> (Mon, 13 Apr 2020 16:04:06 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>eva.murith</strong> (Mon, 13 Apr 2020 18:27:03 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>mathieu.couture</strong> (Mon, 13 Apr 2020 19:23:57 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>penelope.stuart</strong> (Mon, 13 Apr 2020 19:32:11 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>guillaume.fortin</strong> (Mon, 13 Apr 2020 19:34:23 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>chloe.fortier.devin</strong> (Mon, 13 Apr 2020 19:36:22 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Romain_Gayet</strong> (Mon, 13 Apr 2020 19:37:26 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>nestel.jeremie</strong> (Tue, 14 Apr 2020 09:23:55 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>HeleneCauchoix</strong> (Tue, 14 Apr 2020 18:50:35 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>marie-helene.beaudry</strong> (Tue, 14 Apr 2020 22:35:31 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>mathieu.couture</strong> (Wed, 15 Apr 2020 14:11:59 GMT):<br/>
+<i>Has left the channel.</i>
+</p>
+<p><strong>alexandre g</strong> (Fri, 17 Apr 2020 10:04:31 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>test_du_nouveau_bouton</strong> (Fri, 17 Apr 2020 13:01:05 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>ju.tav</strong> (Fri, 17 Apr 2020 16:34:01 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Arthur</strong> (Fri, 17 Apr 2020 16:43:01 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Pierre_Lagrandmaison</strong> (Mon, 20 Apr 2020 14:48:33 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>diana.borda</strong> (Wed, 22 Apr 2020 02:01:20 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>marie-reine.roy</strong> (Thu, 23 Apr 2020 13:00:41 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>ValerieM</strong> (Thu, 23 Apr 2020 16:47:02 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>melanie.marceau-d</strong> (Fri, 24 Apr 2020 15:33:28 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>cynthia.hamel-kropf</strong> (Sun, 26 Apr 2020 20:33:47 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>BENOIT_TROUVE</strong> (Mon, 27 Apr 2020 06:16:36 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>ali.saidi</strong> (Mon, 27 Apr 2020 20:08:17 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>AnneJulie_AB</strong> (Mon, 27 Apr 2020 22:22:55 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>alexandre.barreto</strong> (Tue, 28 Apr 2020 07:17:03 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>thierry.lachapelle</strong> (Tue, 28 Apr 2020 12:27:37 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>clement</strong> (Tue, 28 Apr 2020 17:37:13 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>helene.dimanche</strong> (Tue, 28 Apr 2020 20:28:58 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>Julie-Scheid</strong> (Wed, 29 Apr 2020 14:27:14 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>veloma</strong> (Wed, 29 Apr 2020 18:55:39 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>leandre</strong> (Wed, 29 Apr 2020 23:06:08 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>camille.jolain</strong> (Fri, 01 May 2020 01:54:00 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>johanne.belle-isle</strong> (Fri, 01 May 2020 17:07:03 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>RPP-Ysaia-Melanie-Chloe</strong> (Fri, 01 May 2020 18:53:46 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>damien.lhouillier</strong> (Mon, 04 May 2020 13:59:59 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
+<p><strong>tqmn</strong> (Mon, 04 May 2020 16:12:38 GMT):<br/>
+<i>Has joined the channel.</i>
+</p>
